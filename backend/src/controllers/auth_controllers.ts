@@ -5,18 +5,14 @@ import { withAccelerate } from "@prisma/extension-accelerate";
 import { Context } from "hono";
 import { errorResponseHandler, successResponseHandler } from "../helpers/response_handler";
 import {sign } from 'hono/jwt';
+import {signupInput} from '@lohitbura/homeremediy-common/dist/auth/auth_zod';
 
-const User = z.object({
-    username :z.string(),
-    password: z.string()
-});
 
-type User = z.infer<typeof User>;
 
 export const signUpUser = async(c:Context)=>{
         const request = await c.req.json();
 
-        const zodResult = User.safeParse(request);
+        const zodResult = signupInput.safeParse(request);
     
         if(zodResult.success){
             const prisma = new PrismaClient({
@@ -57,7 +53,7 @@ export const  signinUser = async( c:Context)=>{
 
     try{
         const request = await c.req.json();
-        const zodResult =  User.safeParse(request);
+        const zodResult =  signupInput.safeParse(request);
     if(zodResult.success){
         
         const prisma = new PrismaClient({

@@ -1,0 +1,28 @@
+.header{
+    padding-left: 10px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    width: 100vw;
+    position: fixed;
+    background-color: $lightColor;
+    .header-logo{
+        img{
+            height: 70px;
+        
+        }
+        
+    }
+    .header-items{
+        ul{
+            display: flex;
+            li {
+                list-style: none;
+                padding-inline-end: 10px;
+                cursor: pointer;
+            }
+        }
+    }
+}

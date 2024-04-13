@@ -4,11 +4,8 @@ import {PrismaClient} from "@prisma/client/edge"
 import { errorResponseHandler, successResponseHandler } from "../helpers/response_handler";
 
 import { withAccelerate } from "@prisma/extension-accelerate";
-
-const Post = z.object({
-    title:z.string(),
-    content:z.string()
-})
+import {createBlogInput} from "@lohitbura/homeremediy-common/dist/blogs/blog_zod";
+ 
 
 export const createBlog = async(c:Context)=>{
 
@@ -17,8 +14,8 @@ export const createBlog = async(c:Context)=>{
             datasourceUrl: c.env.DATABASE_URL
         }).$extends(withAccelerate());
        const request =  await c.req.json();
-       const userId = c.req.addValidatedData.id;
-        const zodResult = Post.safeParse(request);
+       const userId = c.get('jwtPayload').id;
+        const zodResult = createBlogInput.safeParse(request);
         if(zodResult.success){
        const post = await prisma.post.create({
         data:{

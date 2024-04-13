@@ -4,6 +4,7 @@
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
+    "@lohitbura/homeremediy-common": "^1.0.0",
     "@peculiar/webcrypto": "^1.4.6",
     "@prisma/client": "^5.12.1",
     "@prisma/extension-accelerate": "^1.0.0",

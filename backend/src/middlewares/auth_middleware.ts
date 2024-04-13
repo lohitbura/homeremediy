@@ -8,7 +8,7 @@ export const authMiddleware = async(c:Context,next:any)=>{
     try{
     const payload = await verify(token,c.env.JWT_SECRET);
 
-    c.req.addValidatedData = payload;
+    c.set('jwtPayload',payload);
     
       return await  next();
     }
