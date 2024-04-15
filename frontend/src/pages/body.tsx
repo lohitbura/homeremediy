@@ -9,7 +9,7 @@ const Body = ()=>{
         <div className="body">
         <Outlet/>
         </div>
-   
+
         </>
     );
 }

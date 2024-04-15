@@ -8,6 +8,16 @@
   padding-top: 70px;
 }
 
+.btnPrimary {
+  width: 100%;
+  height: 100%;
+  background-color: #59b5e2;
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
 .header {
   padding-left: 10px;
   padding-right: 10px;
@@ -29,4 +39,87 @@
   list-style: none;
   padding-inline-end: 10px;
   cursor: pointer;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(249, 249, 249, 0.8);
+}
+
+.loginModal {
+  position: fixed;
+  width: 100%;
+  height: 60%;
+  max-width: 600px;
+  max-height: 500px;
+  top: 50%;
+  z-index: 1;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  display: flex;
+}
+
+.loginContentLeft {
+  width: 50%;
+  padding: 3% 3%;
+}
+.loginContentLeft h2 {
+  margin-bottom: 5%;
+}
+.loginContentLeft h5 {
+  margin-bottom: 5%;
+}
+.loginContentLeft form input {
+  display: block;
+  margin-bottom: 5%;
+  height: 30px;
+  width: 100%;
+  padding-left: 10px;
+}
+.loginContentLeft form .loginButton {
+  height: 30px;
+  margin-bottom: 5%;
+}
+.loginContentLeft .authModeSwitchContainer {
+  width: 100%;
+  text-align: end;
+}
+.loginContentLeft .authModeSwitchContainer p {
+  font-size: 12px;
+}
+.loginContentLeft .authModeSwitchContainer p span {
+  color: #59b5e2;
+  cursor: pointer;
+}
+
+.loginContentRight {
+  position: relative;
+  width: 50%;
+}
+.loginContentRight img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+.loginContentRight .loginCloseButton {
+  position: absolute;
+  width: 30px;
+  left: 87%;
+  top: 3%;
+  height: 30px;
+  border-radius: 20px;
+  background-color: #59b5e2;
+  color: #ffffff;
+  cursor: pointer;
+}
+.loginContentRight .loginCloseButton .loginCloseButtonItem {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 7px;
 }/*# sourceMappingURL=index.css.map */

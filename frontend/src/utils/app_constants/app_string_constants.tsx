@@ -1,4 +1,7 @@
 
+export const appGlobalConstants = {
+    token:"",
+}
 
 export const appLocalizationString = {
     en:{
@@ -7,4 +10,9 @@ export const appLocalizationString = {
         kRegister:'Register',
         kHome:'Home'
     }
+}
+
+export const appConstants = {
+    success:"Success",
+    failure:"Failure"
 }

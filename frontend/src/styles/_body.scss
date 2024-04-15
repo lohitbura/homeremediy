@@ -7,3 +7,13 @@
 .body{
     padding-top: 70px;
 }
+
+.btnPrimary{
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColor;
+    color: $lightColor;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
