@@ -50,7 +50,7 @@ const apiService = {
 
           return await responseHandler(data);
         }
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  
         catch(e:any){
             return {
                 response:appConstants.failure,
@@ -72,7 +72,7 @@ const apiService = {
             console.log(data)
           return await responseHandler(data);
         }
-        // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  
         catch(e:any){
             console.log(e);
             return {

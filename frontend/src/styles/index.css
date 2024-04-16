@@ -18,6 +18,26 @@
   cursor: pointer;
 }
 
+.commonAlertLoaderLayout {
+  position: fixed;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(249, 249, 249, 0.8);
+}
+
+.commonAlertLoader {
+  position: fixed;
+  width: 30%;
+  height: 30%;
+  max-width: 80px;
+  max-height: 80px;
+  top: 50%;
+  z-index: 10;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .header {
   padding-left: 10px;
   padding-right: 10px;

@@ -5,6 +5,9 @@ import { useRef, useState } from "react";
 import { loginUser } from "../../apis/auth_apis";
 import { authResponseInterface } from "../../utils/interfaces/auth_interface";
 import { appConstants } from "../../utils/app_constants/app_string_constants";
+import CommonAlertLoader from "../common/CommonAlertLoader";
+import { useDispatch } from "react-redux";
+import { loginUserSlice } from "../../store/auth_slice";
 
  type LoginInput = {
     open:boolean,
@@ -14,10 +17,12 @@ import { appConstants } from "../../utils/app_constants/app_string_constants";
 const Login = ({open,onClick}:LoginInput)=>{
 
     const [isLogin,setLoginState] = useState(true);
+    const [isLoader,setIsLoader] = useState(false);
 
     const password = useRef<HTMLInputElement>(null);
     const email = useRef<HTMLInputElement>(null);
     const name = useRef<HTMLInputElement>(null);
+    const dispatch = useDispatch();
 
     const buttonAction = async()=>{
         if(email.current!==null && password.current!==null){
@@ -26,8 +31,19 @@ const Login = ({open,onClick}:LoginInput)=>{
 
         if(loginData.response===appConstants.success){
             onClick();
+            setIsLoader(false);
+            dispatch(loginUserSlice(loginData.payload!));
+        }
+        else{
+            setIsLoader(false);
         }
         }
+        else{
+            setIsLoader(false);
+        }
+    }
+    else{
+        setIsLoader(false);
     }
     }
 
@@ -35,6 +51,7 @@ const Login = ({open,onClick}:LoginInput)=>{
         return <></>;
     }
     return (
+        <>
         <div className="overlay" onClick={()=>{
             onClick();
         }}>
@@ -58,6 +75,7 @@ const Login = ({open,onClick}:LoginInput)=>{
                             e.stopPropagation();
                             console.log("here are we")
                             if(email!=null && password!=null){
+                                setIsLoader(true);
                             buttonAction();
                             }
                         }}>Submit</button></div>
@@ -78,6 +96,9 @@ const Login = ({open,onClick}:LoginInput)=>{
         
 
         </div>
+        {isLoader?<CommonAlertLoader/>:<></>}
+</>
+      
     )
 }
 
