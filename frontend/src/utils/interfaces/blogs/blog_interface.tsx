@@ -5,6 +5,12 @@ export interface blogListResponseInterface {
     error?:string
 }
 
+export interface blogDetailsResponseInterface{
+    response:string,
+    payload?:blogDetailsInterface,
+    error?:string
+}
+
 export interface blogDetailsInterface{
     id:string,
     title:string,

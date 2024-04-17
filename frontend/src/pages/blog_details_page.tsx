@@ -1,9 +1,27 @@
+import { useParams } from "react-router-dom";
+import { useBlogDetails } from "../hooks/useBlogDetails";
+import { appConstants } from "../utils/app_constants/app_string_constants";
 
 
 const BlogDetailsScreen  = ()=>{
+
+    const {postId} = useParams();
+    const {data,isLoading} = useBlogDetails(postId??'');
+
+    if(isLoading){
+        return <div>Loading...</div>
+    }
+
+    if(data && data.response==appConstants.success && data.payload){
     return (
-        <div>Blog Details</div>
+        <div className="blogDetails">
+            <h3>{data.payload.title}</h3>
+            <p>{data.payload.content}</p>
+        </div>
+
     )
+}
+return <div></div>
 }
 
 export default BlogDetailsScreen;

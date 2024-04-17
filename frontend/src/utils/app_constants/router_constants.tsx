@@ -2,5 +2,6 @@
 
 export const routerConstants = {
     aboutUsPage:'/about',
-    homePage:'/'
+    homePage:'/',
+    blogDetailsPage:'/blogDetails/'
 }

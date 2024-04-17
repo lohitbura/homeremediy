@@ -1,0 +1,43 @@
+
+.blogListParent {
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: wrap;
+     height: 100%;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom:10px;
+
+}
+
+.blogCard {
+    margin-right: 20px;
+    width: 30%;
+    height: 40vh;
+    border-width: 1px;
+    border-style: solid;
+    border-color: $disableColor;
+    border-radius: 20px;
+    background-color: rgba($color: $disableColor, $alpha: 0.2);
+    margin-bottom: 20px;
+    cursor: pointer;
+    padding-bottom: 10px;
+
+    img {
+        width: 100%;
+        height: 30vh;
+        border-radius: 20px 20px 0px 0px;
+    }
+
+    h3{
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+
+    p{
+        padding-left: 10px;
+        max-lines: 1;  
+    }
+
+}
