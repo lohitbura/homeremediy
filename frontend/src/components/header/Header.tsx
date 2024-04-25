@@ -26,6 +26,14 @@ const Header = ()=>{
             </div>
             <div className="header-items">
                 <ul>
+                    {
+                        isLoggedIn?<li
+                        onClick={()=>{
+                            navigate(routerConstants.addPost);
+                        }}>
+                            {appLocalizationString[`${langKey}`].kAddPost}
+                        </li>:<></>
+                    }
                     <li
                     onClick={()=>{
                         navigate(routerConstants.homePage);

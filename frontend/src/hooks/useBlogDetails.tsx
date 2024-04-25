@@ -11,6 +11,7 @@ export const useBlogDetails = (id:string)=>{
     const fetchData = async()=>{
         setLoading(true);
      const   result = await fetchBlogDetails(id);
+     console.log(result);
      setData(result);
      setLoading(false)
     }

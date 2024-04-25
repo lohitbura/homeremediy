@@ -5,6 +5,7 @@ import AboutUsPage from "../../pages/about_us_page";
 import Home from "../../pages/home";
 import { routerConstants } from "../app_constants/router_constants";
 import BlogDetailsScreen from "../../pages/blog_details_page";
+import AddPostPage from "../../pages/add_post";
 
 export const appRouter = createBrowserRouter(
     [
@@ -28,6 +29,10 @@ export const appRouter = createBrowserRouter(
                         {
                             path:routerConstants.blogDetailsPage+':postId',
                             element:<BlogDetailsScreen/>
+                        },
+                        {
+                            path:routerConstants.addPost,
+                            element:<AddPostPage/>
                         }
                     ]
                 },

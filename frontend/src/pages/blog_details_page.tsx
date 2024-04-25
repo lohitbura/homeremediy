@@ -3,6 +3,7 @@ import { useBlogDetails } from "../hooks/useBlogDetails";
 import { appConstants } from "../utils/app_constants/app_string_constants";
 
 
+
 const BlogDetailsScreen  = ()=>{
 
     const {postId} = useParams();
@@ -16,7 +17,11 @@ const BlogDetailsScreen  = ()=>{
     return (
         <div className="blogDetails">
             <h3>{data.payload.title}</h3>
-            <p>{data.payload.content}</p>
+        
+            <div dangerouslySetInnerHTML={{ __html: data.payload.content }} />
+
+    
+        
         </div>
 
     )

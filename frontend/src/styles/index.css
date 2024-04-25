@@ -182,4 +182,39 @@
 .blogCard p {
   padding-left: 10px;
   max-lines: 1;
+}
+
+.addPostParent {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+}
+.addPostParent .addPostTitle {
+  margin-bottom: 20px;
+}
+.addPostParent .addPostTitle input {
+  height: 70px;
+  width: 100%;
+  font-size: 40px;
+  padding: 5px;
+}
+.addPostParent .addPostContent {
+  margin-bottom: 60px;
+}
+.addPostParent .addPostButtonCover {
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.addPostParent .addPostButton {
+  width: 10%;
+}
+
+.blogDetails {
+  padding: 20px;
+}
+.blogDetails h3 {
+  margin-bottom: 20px;
+  font-size: larger;
 }/*# sourceMappingURL=index.css.map */

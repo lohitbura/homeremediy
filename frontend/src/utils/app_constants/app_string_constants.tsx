@@ -15,21 +15,24 @@ export const appLocalizationString:Translations = {
         kLogin:'Login',
         kRegister:'Register',
         kHome:'Home',
-        kLogout:'Logout'
+        kLogout:'Logout',
+        kAddPost:'Add Post'
     },
     hi:{
         kAboutUs:'हमारे बारे में',
         kLogin:'Login',
         kRegister:'Register',
         kHome:'Home',
-        kLogout:'Logout'
+        kLogout:'Logout',
+        kAddPost:'Add Post'
     },
     de:{
         kAboutUs:'About Us',
         kLogin:'Login',
         kRegister:'Register',
         kHome:'Home',
-        kLogout:'Logout'
+        kLogout:'Logout',
+        kAddPost:'Add Post'
     }
 }
 

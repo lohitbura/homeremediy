@@ -36,6 +36,20 @@ const responseHandler = async (data:Response):Promise<apiResponseInterface>=>{
     }
 }
 
+function replacer(key:any, value:any) {
+    if (typeof value === 'object' && value !== null) {
+      // If the object has been seen before, return undefined to avoid circular reference
+      if (seen.has(value)) {
+        return undefined;
+      }
+      // Otherwise, add the object to the set
+      seen.add(value);
+    }
+    return value;
+  }
+  
+  const seen = new WeakSet();
+
 const apiService = {
     get: async(path:string,query?:Map<any,any>):Promise<apiResponseInterface>=>{
         try{
@@ -67,7 +81,7 @@ const apiService = {
                 method:"POST",
         
                 headers:apiHeader,
-                body:JSON.stringify(bodyData)
+                body:JSON.stringify(bodyData,replacer)
             })
             console.log(data)
           return await responseHandler(data);

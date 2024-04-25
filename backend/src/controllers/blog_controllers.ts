@@ -127,6 +127,7 @@ export const  getAllBlogs = async(c:Context)=>{
 
 export const getBlogDetails = async(c:Context)=>{
     try{
+        console.log(c.req);
        const postId = c.req.param('postId')??'';
        const prisma  = new PrismaClient({
             datasourceUrl:c.env.DATABASE_URL

@@ -3,5 +3,6 @@
 export const routerConstants = {
     aboutUsPage:'/about',
     homePage:'/',
-    blogDetailsPage:'/blogDetails/'
+    blogDetailsPage:'/blogDetails/',
+    addPost:'/addPost'
 }

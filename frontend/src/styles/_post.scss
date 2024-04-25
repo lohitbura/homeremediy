@@ -1,0 +1,28 @@
+
+.addPostParent {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    .addPostTitle {
+        margin-bottom: 20px;
+        input {
+            height: 70px;
+            width: 100%;
+            font-size: 40px;
+            padding: 5px;
+        }
+    }
+    .addPostContent{
+        margin-bottom: 60px;
+    }
+    .addPostButtonCover{
+        height: 40px;
+        width: 100%;
+        display: flex;
+        justify-content: end;
+    
+    }
+    .addPostButton{
+        width: 10%;
+    }
+}

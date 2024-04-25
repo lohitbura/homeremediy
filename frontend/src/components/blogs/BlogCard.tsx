@@ -13,7 +13,7 @@ const BlogCard = (blogData:blogDetailsInterface)=>{
     }}>
         <img src={appImages.loginImage}></img>
         <h3>{blogData.title}</h3>
-        <p>{blogData.content}</p>
+        <p>{blogData.author.username}</p>
     </div>
 }
 
